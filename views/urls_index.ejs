@@ -6,11 +6,14 @@
 </head>
     <body>
       <% for (let key in urls) { %>
-      <table style="width:25%">
         <tr>
           <td><%= key %></td>
           <td><%= urls[key] %></td>
-          <% } %>
+            <form action="/urls/<%= key %>/delete" method="POST">
+            <p><button> Delete </button></p>
+            <p><a href="/urls/<%= key %>/">Edit</a></p>
+            </form>
+            <% } %>
         </tr>
       </table>
     <a href='#' </a>

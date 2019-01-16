@@ -5,8 +5,13 @@
     <title>TinyApp</title>
 </head>
   <body>
-    <b>shortURL</b> : <%= shortURL %>
+    <b>shortURL</b> : <b><%= shortURL %></b>
+      <form action="/urls/<%= shortURL %>" method="POST" style="margin:0px;">
+      <p><p>
+<!--       <label for="longURL">Enter a URL:</label> -->
+      <input id="longURL" type="text" name="longURL" placeholder="//http://" style="width: 300px">
+      <button> Update </button>
     <p><p>
-    <b>longURL</b>  : <%= longURL %>
+    <!-- <b>longURL</b>  : <%= longURL %> -->
   </body>
 </html>
