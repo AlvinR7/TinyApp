@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <% include ./partials/_header %>
     <title>TinyApp</title>
+    <% include ./partials/_header %>
 </head>
     <body>
+      <ul>
       <% for (let key in urls) { %>
-        <tr>
-          <td><%= key %></td>
-          <td><%= urls[key] %></td>
+        <li>
+          <%= key %> : <%= urls[key] %>
             <form action="/urls/<%= key %>/delete" method="POST">
             <p><button> Delete </button></p>
             <p><a href="/urls/<%= key %>/">Edit</a></p>
             </form>
-            <% } %>
-        </tr>
-      </table>
-    <a href='#' </a>
+        </li>
+          <% } %>
+      </ul>
     </body>
 </html>
